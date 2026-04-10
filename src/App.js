@@ -24,7 +24,7 @@ const Home = () => {
 
   const handleAddToCart = (product) => {
     const existingItem = cartItems.find(item => item.id === product.id);
-    
+
     if (existingItem) {
       setCartItems(cartItems.map(item =>
         item.id === product.id
@@ -43,7 +43,7 @@ const Home = () => {
       handleRemoveItem(productId);
       return;
     }
-    
+
     setCartItems(cartItems.map(item =>
       item.id === productId
         ? { ...item, quantity: newQuantity }
@@ -92,7 +92,7 @@ const Home = () => {
       <Membership onOpenMembershipModal={handleOpenMembershipModal} />
       <Testimonials />
       <Footer />
-      <Cart 
+      <Cart
         isOpen={isCartOpen}
         onClose={() => setIsCartOpen(false)}
         cartItems={cartItems}
@@ -100,17 +100,17 @@ const Home = () => {
         onRemoveItem={handleRemoveItem}
         onCheckout={handleCheckout}
       />
-      <MembershipModal 
-        isOpen={isMembershipModalOpen} 
-        onClose={() => setIsMembershipModalOpen(false)} 
+      <MembershipModal
+        isOpen={isMembershipModalOpen}
+        onClose={() => setIsMembershipModalOpen(false)}
         plan={selectedPlan}
         onConfirm={handleConfirmPurchase}
       />
-      <CheckoutModal 
-        isOpen={isCheckoutModalOpen} 
-        onClose={() => setIsCheckoutModalOpen(false)} 
-        cartItems={cartItems} 
-        onConfirm={handleConfirmOrder} 
+      <CheckoutModal
+        isOpen={isCheckoutModalOpen}
+        onClose={() => setIsCheckoutModalOpen(false)}
+        cartItems={cartItems}
+        onConfirm={handleConfirmOrder}
       />
       <ChatBot />
       <Toaster position="top-right" richColors />
@@ -121,7 +121,7 @@ const Home = () => {
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
