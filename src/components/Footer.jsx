@@ -16,10 +16,10 @@ const Footer = () => {
             <h4 className="font-bold text-lg mb-4">About Us</h4>
             <p className="text-gray-400 text-sm mb-3">Made by:</p>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li className="flex items-center space-x-2"><span>👤</span><span>Gurjot Singh</span></li>
-              <li className="flex items-center space-x-2"><span>👤</span><span>Kabir Gulyani</span></li>
-              <li className="flex items-center space-x-2"><span>👤</span><span>Aryan Saini</span></li>
-              <li className="flex items-center space-x-2"><span>👤</span><span>Sangam Goyal</span></li>
+              <li className="flex items-center space-x-2"><span>👤</span><span>Manish Kumar</span></li>
+              <li className="flex items-center space-x-2"><span>👤</span><span>Mehak</span></li>
+              <li className="flex items-center space-x-2"><span>👤</span><span>Muskan</span></li>
+              <li className="flex items-center space-x-2"><span>👤</span><span>Navdeep Kaur</span></li>
             </ul>
           </div>
           <div>
